@@ -173,23 +173,23 @@ def showSelectNPCWindow(window:Tk, currentFrame:Frame, name:str, NPCList:list, p
 
                            
                      def show_abnormally_low_ending():
-                            return ([txtImgOptNameSndAff("(HI)", "pictures/libraryjohnny0.png", [1], None, "sounds/animalese.wav")])
-                     
+                            return ([txtImgOptNameSndAff("(YOU LOSE)", "pictures/libraryjohnny0.png", [115], '', '', None, True)])
+                           
 
                      def show_too_low_ending():
-                             return ([txtImgOptNameSndAff("(HI)", "pictures/libraryjohnny0.png", [1], None, "sounds/animalese.wav")])
+                             return ([txtImgOptNameSndAff("(Get better)", "pictures/libraryjohnny0.png", [115], '', '', None, True)])
                      
 
                      def show_normal_ending():
-                             return ([txtImgOptNameSndAff("(HI)", "pictures/libraryjohnny0.png", [1], None, "sounds/animalese.wav")])
+                             return ([txtImgOptNameSndAff("(mediocore)", "pictures/libraryjohnny0.png", [115], '', '', None, True)])
                      
 
                      def show_high_affection_ending():
-                             return ([txtImgOptNameSndAff("(HI)", "pictures/libraryjohnny0.png", [1], None, "sounds/animalese.wav")])
+                             return ([txtImgOptNameSndAff("(good job)", "pictures/libraryjohnny0.png", [115], '', '', None, True)])
                      
 
                      def show_super_high_affection_ending():
-                             return ([txtImgOptNameSndAff("(HI)", "pictures/libraryjohnny0.png", [1], None, "sounds/animalese.wav")])
+                             return ([txtImgOptNameSndAff("(Sheeeeesh)", "pictures/libraryjohnny0.png", [115], '', '', None, True)])
                      
                      chatButton4 = Button(selectFrame, text=NPC.getName(),  image = image, compound=TOP, borderwidth=2, background="#d1aa73", foreground="black", font=("roboto", 20), command=lambda i=i :createScenes(window, selectFrame,
                      [txtImgOptNameSndAff("(Day 1 You're buried in books at the SUTD library, preparing for your final exams.)", "pictures/libraryjohnny0.png", [1], None, "sounds/animalese.wav"),
@@ -246,11 +246,16 @@ def showSelectNPCWindow(window:Tk, currentFrame:Frame, name:str, NPCList:list, p
                      txtImgOptNameSndAff("(Day 7 A quiet spot on campus, preparing to say goodbye.)", "pictures/sutdscene.png", [52], None, "sounds/animalese.wav"),
                      txtImgOptNameSndAff("This week with you has been the best part of my exchange. I wish it didn't have to end.", "pictures/sutdscene.png", [53], "Johnny Sin", "sounds/xm1.wav"),
                      txtImgOptNameSndAff("", "pictures/sutdscene.png", [{"text": "I feel the same way, Johnny. This week was unforgettable.", "nextSceneIndex": 54, "affection": {"affectedNPC": JOHNNYSIN, "change": INCREASE}},{"text": "It's been great, hasn't it? We made some good memories.", "nextSceneIndex": 54, "affection": {"affectedNPC": JOHNNYSIN, "change": NEUTRAL}},{"text": "All good things come to an end, rollercoasters are fun, but eventually, you have to get off", "nextSceneIndex": 54, "affection": {"affectedNPC": JOHNNYSIN, "change": DECREASE}},{"text": "Let's make a promise to see each other again, no matter what.", "nextSceneIndex": 54, "affection": {"affectedNPC": JOHNNYSIN, "change": INCREASE}}],"You"), 
-                     txtImgOptNameSndAff("I hope we can keep in touch. Maybe you could visit me in the States someday?", "pictures/sutdscene.png", [55],"Johnny Sin", "sounds/xm1.wav"),
-                     txtImgOptNameSndAff("", "pictures/sutdscene.png", [{"text": "I'd like that. It's not goodbye, just see you later.", "nextSceneIndex": 56, "affection": {"affectedNPC": JOHNNYSIN, "change": INCREASE}},{"text": "Sure, we can try to stay in touch. Who knows what the future holds?", "nextSceneIndex": 56, "affection": {"affectedNPC": JOHNNYSIN, "change": NEUTRAL}},{"text": "It's hard to make such promises, Johnny. But let's enjoy today.", "nextSceneIndex": 56, "affection": {"affectedNPC": JOHNNYSIN, "change": DECREASE}}],"You"),
-                     txtImgOptNameSndAff( "It's been an amazing week, Johnny Sin. Thanks for sharing it with me.", "pictures/sutdscene.png", [57], "You", "sounds/justforfun.wav"),
-                     txtImgOptNameSndAff( end_game(affection_score), "pictures/sutdscene.png", [57], "You", "sounds/justforfun.wav"),
+                     txtImgOptNameSndAff("I hope we can keep in touch. Maybe you could visit my girlfriend and I in the States someday?", "pictures/sutdscene.png", [55],"Johnny Sin", "sounds/xm1.wav"),
+                     txtImgOptNameSndAff( ".......................??.", "pictures/sutdscene.png", [57], "You", "sounds/silence.wav"),
+                     txtImgOptNameSndAff("", "pictures/sutdscene.png", [{"text": "Bruhhhhhhh.", "nextSceneIndex": 56, "affection": {"affectedNPC": JOHNNYSIN, "change": DECREASE}},{"text": "Sure, we can try to stay in touch. Who knows what the future holds?", "nextSceneIndex": 56, "affection": {"affectedNPC": JOHNNYSIN, "change": NEUTRAL}},{"text": "Can I be your sidechick?", "nextSceneIndex": 56, "affection": {"affectedNPC": JOHNNYSIN, "change": INCREASE}}],"You"),
+                     txtImgOptNameSndAff( "(Johnny Sin went back to USA, you are left alone in sutd. Feeling empty and depressed, you decided to commit sudoku. END)", "pictures/endgamejohnny.png", [57], "You", "sounds/justforfun.wav"),
+                     txtImgOptNameSndAff( end_game(affection_score), "pictures/endgamejohnny.png", [57], "You", "sounds/justforfun.wav"),
                      end_game(affection_score)],photoImage))
+                     def show_normal_ending():
+                            return ([txtImgOptNameSndAff("(HI)", "pictures/libraryjohnny0.png", [115], '', '', None, True)])
+
+   
                      
 
                      chatButton4.grid(row=row, column=column, sticky=N+E+W+S, padx=10, pady=10)
